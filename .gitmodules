@@ -6,7 +6,3 @@
 	path = vto-tellowifi
 	url = https://github.com/enacuavlab/vto-tellowifi.git
 	branch = master
-[submodule "vto-wifimonitorinject"]
-	path = vto-wifimonitorinject
-	url = git@github.com:enacuavlab/vto-wifimonitorinject.git
-	branch = master
