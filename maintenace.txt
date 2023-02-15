@@ -1,0 +1,24 @@
+cd Projects
+
+cd vto-prod
+
+git submodule add -b master git@github.com:enacuavlab/vto-tellowifi.git
+
+cd Projects
+
+git clone git@github.com:enacuavlab/vto-tellowifi.git
+
+cd vto-tellowifi
+
+make changes
+
+git add .
+git commit -m "up"
+git push
+
+cd vto-prod
+
+git submodule update --remote 
+git add .
+git commit -m "up"
+git push
