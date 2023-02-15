@@ -1,22 +1,55 @@
+------------------------------------------------------------------------
+Sign in github and create subprojects
+
+1) Create new reposistory
+2) Add a README file
+3) Set master as the default branch (not main)
+
+
+
 cd Projects
-
-cd vto-prod
-
-git submodule add -b master git@github.com:enacuavlab/vto-tellowifi.git
-
-cd Projects
-
-git clone git@github.com:enacuavlab/vto-tellowifi.git
-
-cd vto-tellowifi
-
+git clone git@github.com:enacuavlab/vto-realsim.git
+cd vto-realsim
 make changes
 
 git add .
 git commit -m "up"
 git push
 
+
+------------------------------------------------------------------------
+Sign in github and create main project
+
+1) Create new reposistory
+2) Add a README file
+3) Set master as the default branch (not main)
+
+cd Projects
+git clone git@github.com:enacuavlab/vto-prod.git
 cd vto-prod
+make changes
+
+git add .
+git commit -m "up"
+git push
+
+
+git submodule add -b master https://github.com/enacuavlab/vto-realsim.git
+git add .
+git commit -m "up"
+git push
+
+
+------------------------------------------------------------------------
+Make changes on subproject master branch
+
+
+------------------------------------------------------------------------
+Import changes on main projects links
+
+git clone git@github.com:enacuavlab/vto-prod.git
+cd vto-prod
+git submodule update --init vto-tellowifi
 
 git submodule update --remote 
 git add .
